@@ -1,0 +1,7 @@
+.DS_Store
+dataset/
+.idea/
+Library/
+test-zone/
+*.zip
+*.pdf

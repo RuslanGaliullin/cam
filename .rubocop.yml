@@ -1,0 +1,8 @@
+AllCops:
+  SuggestExtensions: false
+  NewCops: enable
+
+Layout/EmptyLineAfterGuardClause:
+  Enabled: false
+Metrics/BlockLength:
+  Max: 30
