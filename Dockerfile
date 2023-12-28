@@ -27,8 +27,9 @@ ENV DEBIAN_FRONTEND=noninteractive
 SHELL ["/bin/bash", "--login", "-c"]
 
 RUN apt-get install openjdk-11-jdk -y
-
 RUN java --version
+
+RUN pip install aiofiles
 
 WORKDIR /cam
 COPY Makefile /cam
