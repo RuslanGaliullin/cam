@@ -27,8 +27,9 @@ ENV DEBIAN_FRONTEND=noninteractive
 SHELL ["/bin/bash", "--login", "-c"]
 
 RUN apt-get install openjdk-11-jdk -y
-
 RUN java --version
+
+RUN pip install aiofiles
 
 WORKDIR /cam
 COPY Makefile /cam
@@ -37,7 +38,7 @@ COPY steps/install.sh /cam/steps/
 COPY help/* /cam/help/
 COPY tests/* /cam/tests/
 
-RUN rm -rf /cam/metrics/multimetric.sh /cam/metrics/authors.sh /cam/metrics/jpeek.sh /cam/metrics/ast.py
+RUN rm -rf /cam/metrics/authors.sh /cam/metrics/jpeek.sh /cam/metrics/ast.py
 
 COPY . /cam
 # RUN chmod a+rx /cam/metrics/mine_metric.py
