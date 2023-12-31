@@ -20,12 +20,11 @@
 # LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 # OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 # SOFTWARE.
-from timeit import default_timer as timer
+
 import sys
 import os
 import javalang
 import subprocess
-import time
 from multiprocessing import Pool, cpu_count
 import asyncio
 import aiofiles
@@ -69,8 +68,6 @@ def collect_body(start, text):
         start += 1
         backslash = backslash + 1 if current_char == '\\' else 0
 
-    # if balance != 0:
-    #     raise RuntimeError(f"unparsable method")
     return result
 
 def split_list(input_list, chunk_size):
@@ -128,14 +125,6 @@ if __name__ == '__main__':
                 with open(LST, 'a+', encoding='utf-8') as others:
                     others.write(JAVA + "\n")
                 exit(0)
-                # with Pool() as pool:
-                    # Use starmap to pass multiple arguments to the function
-                    # res = pool.starmap(run_async, [(methods, text, dir_name) for methods in split_list(result, cpu_count())])
-                    # print(res)
-                # with open(os.path.join(f"{os.path.dirname(LST)}/github/", JAVA), 'w', encoding='utf-8') as others:
-                #     others.write(text)
-        # end = timer()
-        # print(end-start)
     except Exception as e:
         pass
     try:
