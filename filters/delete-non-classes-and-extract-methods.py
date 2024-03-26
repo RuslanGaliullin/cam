@@ -135,7 +135,7 @@ if __name__ == '__main__':
             compile_command = "javac /cam/filters/java/org/example/Main.java" #/home/rmg
             subprocess.run(compile_command, shell=True, check=True)
 
-            # Execute the Java program
+            # Extract methods
             execute_command = f"java -cp /cam/filters/java org.example.Main {JAVA}"
             result = subprocess.run(execute_command, shell=True, capture_output=True)
             result = result.stdout.decode().split("\n")
