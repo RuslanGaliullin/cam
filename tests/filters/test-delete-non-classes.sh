@@ -57,7 +57,7 @@ echo "👍🏻 A Java file with a enum inside was deleted correctly"
 {
     java=${temp}/Broken.java
     echo "broken syntax" > "${java}"
-    "${LOCAL}/filters/delete-non-classes.py" "${java}" "${temp}/deleted.txt"
+    "${LOCAL}/filters/delete-non-classes-and-extract-methods" "${java}" "${temp}/deleted.txt"
     test -e "${java}"
     grep -v "${java}" "${temp}/deleted.txt"
 } > "${stdout}" 2>&1
