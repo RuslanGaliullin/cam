@@ -1,0 +1,22 @@
+# This CITATION.cff file was generated with cffinit.
+# Visit https://bit.ly/cffinit to generate yours today!
+
+cff-version: 1.2.0
+title: >-
+  CAM: a Collection of Snapshots of GitHub Java Repositories
+  Together With Metrics
+message: >-
+  If you use this dataset, please cite it using the metadata
+  from this file.
+type: dataset
+authors:
+  - family-names: Bugayenko
+    given-names: Yegor
+  - given-names: Ruslan
+    family-names: Galiullin
+repository-code: 'https://github.com/RuslanGaliullin/cam'
+repository: 'https://github.com/yegor256/cam'
+license: MIT
+commit: 5dd3978
+version: '1'
+date-released: '2024-03-26'
